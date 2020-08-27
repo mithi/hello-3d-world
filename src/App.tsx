@@ -1,4 +1,5 @@
-import React from "react"
+/** @jsx jsx */
+import { css, jsx } from "@emotion/core"
 
 function App() {
     return (
@@ -14,9 +15,9 @@ function App() {
                         bare-mininmum-3d
                     </code>
                     package.
-                    <span></span>😜
                 </p>
             </div>
+
             <div className="px-6 py-4">
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
                     #d3
@@ -27,6 +28,19 @@ function App() {
                 <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
                     #plot
                 </span>
+            </div>
+            <div
+                css={css`
+                    padding: 32px;
+                    background-color: red;
+                    font-size: 24px;
+                    border-radius: 4px;
+                    &:hover {
+                        color: blue;
+                    }
+                `}
+            >
+                Hover to change color.
             </div>
         </div>
     )
