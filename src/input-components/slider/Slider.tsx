@@ -1,11 +1,23 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core"
 import { sliderCss, sliderContainerCss } from "./SliderCss"
+import sliderProps from "./type"
 
-const Slider = () => (
+const Slider = ({ value, onChange, id, label, min, max, step }: sliderProps) => (
     <div css={sliderContainerCss}>
-        <label>My label</label> : <span>70</span>
-        <input css={sliderCss} type="range" min="0" max="100" value="70" />
+        <label htmlFor={id}>{label}</label>: <span>{value}</span>
+        <input
+            {...{
+                min,
+                max,
+                step,
+                value,
+                type: "range",
+                css: sliderCss,
+                onChange: (e: React.ChangeEvent<HTMLInputElement>) =>
+                    onChange(id, Number(e.target.value)),
+            }}
+        />
     </div>
 )
 
