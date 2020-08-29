@@ -7,18 +7,18 @@ const sliderCss = css`
     appearance: none;
     background-color: #e91e63;
     width: 100%;
-    height: 0.5rem;
+    height: 0.1rem;
     outline: none;
-    border-radius: 0.25rem;
+    border-radius: 0.2rem;
     &:hover,
     &:active {
         background: #673ab7;
     }
     &:hover&::-webkit-slider-thumb {
-        border: 0.25rem solid #673ab7;
+        border: 0.15rem solid #673ab7;
     }
     &:hover&::-moz-range-thumb {
-        border: 0.25rem solid #673ab7;
+        border: 0.15rem solid #673ab7;
     }
     &::-webkit-slider-thumb {
         -webkit-appearance: none;
@@ -26,7 +26,7 @@ const sliderCss = css`
         width: 1.5rem;
         height: 1.5rem;
         background-color: black;
-        border: 0.25rem solid #e91e63;
+        border: 0.15rem solid #e91e63;
         border-radius: 1rem;
         cursor: pointer;
     }

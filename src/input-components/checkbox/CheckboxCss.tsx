@@ -19,12 +19,12 @@ const checkboxCss = css`
             vertical-align: text-top;
             width: 20px;
             height: 20px;
-            background: #673ab7;
+            background: #e91e63;
         }
 
         // Box hover
         &:hover + label:before {
-            background: #e91e63;
+            background: #673ab7;
         }
 
         // Box focus
@@ -59,7 +59,6 @@ const checkboxContainerCss = css`
     font-size: 15px;
     font-family: monaco;
     padding: 10px;
-    margin: 10px;
     color: #e91e63;
     &:hover {
         color: #673ab7;

@@ -2,9 +2,9 @@
 import { css } from "@emotion/core"
 
 const selectCss = css`
-    border-width: 3px;
+    border-width: 1px;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
     margin: 10px;
     font-size: 15px;
     font-family: monaco;
