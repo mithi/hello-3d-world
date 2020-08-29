@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { css, jsx } from "@emotion/core"
-import { useState, FunctionComponent } from "react"
+import React, { useState } from "react"
+import Layout from "./Layout"
 import BareMinimum2d from "bare-minimum-2d"
 import bareMinimumProps from "./sample"
 import {
@@ -20,22 +19,6 @@ import {
 
 import Select from "./input-components/select/Select"
 
-const Card: FunctionComponent = ({ children }) => (
-    <div className="w-full md:w-1/2 lg:w-1/3">
-        <div
-            css={css`
-                border-width: 1px;
-                border-color: #673ab7;
-                margin: 10px;
-                background-color: #17212b;
-                padding: 10px;
-                border-radius: 20px;
-            `}
-        >
-            {children}
-        </div>
-    </div>
-)
 const App = () => {
     const [sceneSettings, setSceneSettings] = useState(SCENE_SETTINGS_INIT_STATE)
     const [viewSettings, setViewSettings] = useState(VIEW_SETTINGS_INIT_STATE)
@@ -55,22 +38,11 @@ const App = () => {
         setSceneOptions({ ...sceneOptions, [stateKey]: value })
 
     return (
-        <div
-            css={css`
-                background-color: #17212b;
-                padding: 5px;
-            `}
-            className="sm:flex"
-        >
-            <div
-                css={css`
-                    height: 100vh;
-                `}
-                className="w-full md:w-1/2 lg:w-2/3"
-            >
+        <Layout>
+            <Layout.Main>
                 <BareMinimum2d {...bareMinimumProps} />
-            </div>
-            <Card>
+            </Layout.Main>
+            <Layout.Side>
                 <Select
                     id="current-menu"
                     options={menuOptions}
@@ -96,8 +68,8 @@ const App = () => {
                         setValueFunction={logSceneOptions}
                     />
                 </div>
-            </Card>
-        </div>
+            </Layout.Side>
+        </Layout>
     )
 }
 
