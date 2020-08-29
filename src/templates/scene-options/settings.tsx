@@ -2,7 +2,6 @@ const INIT_STATE: Record<string, boolean> = {
     showWorldAxes: true,
     showEdgeAxes: true,
     showCubeAxes: true,
-    showCubeEdgeAxes: true,
     showXYplane: true,
     showCrosslines: true,
     showCubeEdges: true,

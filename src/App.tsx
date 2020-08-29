@@ -1,7 +1,9 @@
 import React, { useState } from "react"
 import Layout from "./Layout"
 import BareMinimum2d from "bare-minimum-2d"
-import bareMinimumProps from "./sample"
+import renderScene from "@mithi/bare-minimum-3d"
+import sceneOptionsData from "./sample-scene"
+import sample3d from "./sample-3d-data"
 import {
     INIT_STATE as SCENE_SETTINGS_INIT_STATE,
     SceneSettings,
@@ -19,6 +21,35 @@ import {
 
 import Select from "./input-components/select/Select"
 
+/*
+    showWorldAxes: true,
+    showEdgeAxes: true,
+    showCubeAxes: true,
+    showCubeEdgeAxes: true,
+    showXYplane: true,
+    showCrosslines: true,
+    showCubeEdges: true,
+*/
+const partialSceneOptionsData = (sceneOptions: Record<string, boolean>) => {
+    const {
+        showWorldAxes,
+        showEdgeAxes,
+        showCubeAxes,
+        showXYplane,
+        showCrosslines,
+        showCubeEdges,
+    } = sceneOptions
+
+    return {
+        paper: sceneOptionsData.paper,
+        xyPlane: showXYplane ? sceneOptionsData.xyPlane : undefined,
+        sceneEdges: showCubeEdges ? sceneOptionsData.sceneEdges : undefined,
+        crossLines: showCrosslines ? sceneOptionsData.crossLines : undefined,
+        edgeAxes: showEdgeAxes ? sceneOptionsData.edgeAxes : undefined,
+        worldAxes: showWorldAxes ? sceneOptionsData.worldAxes : undefined,
+        cubeAxes: showCubeAxes ? sceneOptionsData.cubeAxes : undefined,
+    }
+}
 const App = () => {
     const [sceneSettings, setSceneSettings] = useState(SCENE_SETTINGS_INIT_STATE)
     const [viewSettings, setViewSettings] = useState(VIEW_SETTINGS_INIT_STATE)
@@ -37,6 +68,13 @@ const App = () => {
     const logSceneOptions = (stateKey: string, value: boolean) =>
         setSceneOptions({ ...sceneOptions, [stateKey]: value })
 
+    const sceneOptionsData = partialSceneOptionsData(sceneOptions)
+    const bareMinimumProps = renderScene(
+        viewSettings,
+        sceneSettings,
+        sceneOptionsData,
+        sample3d
+    )
     return (
         <Layout>
             <Layout.Main>

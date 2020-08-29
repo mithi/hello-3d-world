@@ -1,4 +1,4 @@
-const INIT_STATE: Record<string, number | string> = {
+const INIT_STATE = {
     camTx: -0.2,
     camTy: -0.2,
     camTz: 1.5,

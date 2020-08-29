@@ -1,4 +1,4 @@
-const INIT_STATE: Record<string, number> = {
+const INIT_STATE = {
     cubeRange: 600,
     cubeZoffset: 1,
     dataZoffset: 0,
