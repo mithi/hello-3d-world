@@ -5,13 +5,13 @@ import { selectCss, selectContainerCss } from "./SelectCss"
 type propType = {
     id: string
     options: string[]
-    label: string
+    label?: string
     value: string
     onChange: (id: string, value: string) => void
 }
 const Select = ({ id, options, label, value, onChange }: propType) => (
     <div css={selectContainerCss}>
-        <label>{label}</label>
+        {label ? <label>{label}</label> : null}
         <select
             css={selectCss}
             value={value}
