@@ -14,6 +14,7 @@ const INIT_STATE: Record<string, number | string> = {
 const defaultCamStateProps = {
     id: "v-default-cam-orientation",
     options: ["z-forward-x-left", "z-up-x-left", "z-up-x-forward", "z-forward-x-right"],
+    label: "default camera orientation",
 }
 
 const sliderStateIds = [
@@ -82,4 +83,11 @@ const idToStateMap: Record<string, string> = {
     "n-v-canvas-to-view-ratio": "canvasToViewRatio",
 }
 
-export { stateIds, INIT_STATE, sliderProps, idToStateMap, sliderStateIds }
+export {
+    stateIds,
+    INIT_STATE,
+    sliderProps,
+    idToStateMap,
+    sliderStateIds,
+    defaultCamStateProps,
+}

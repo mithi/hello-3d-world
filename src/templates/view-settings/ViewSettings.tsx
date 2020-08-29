@@ -1,5 +1,6 @@
 import React from "react"
 import Slider from "../../input-components/slider/Slider"
+import Select from "../../input-components/select/Select"
 
 import * as settings from "./settings"
 
@@ -24,6 +25,12 @@ const ViewSettings = ({ values, setValueFunction }: propType) => {
                     }}
                 />
             ))}
+            <Select
+                onChange={setValue}
+                key={settings.defaultCamStateProps.id}
+                value={settings.idToStateMap[settings.defaultCamStateProps.id]}
+                {...settings.defaultCamStateProps}
+            />
         </div>
     )
 }
