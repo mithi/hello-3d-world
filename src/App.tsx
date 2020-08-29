@@ -1,6 +1,8 @@
 import React, { useState } from "react"
-import SceneSettings from "./templates/scene-settings/SceneSettings"
-import { INIT_STATE as SCENE_SETTINGS_INIT_STATE } from "./templates/scene-settings/scene-settings"
+import {
+    INIT_STATE as SCENE_SETTINGS_INIT_STATE,
+    SceneSettings,
+} from "./templates/scene-settings/"
 
 const App = () => {
     const [sceneSettings, setSceneSettings] = useState(SCENE_SETTINGS_INIT_STATE)

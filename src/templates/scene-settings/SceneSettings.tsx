@@ -1,6 +1,6 @@
 import React from "react"
 import Slider from "../../input-components/slider/Slider"
-import * as settings from "./scene-settings"
+import * as settings from "./settings"
 
 type propType = {
     values: Record<string, number>

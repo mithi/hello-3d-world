@@ -1,3 +1,11 @@
+const INIT_STATE: Record<string, number> = {
+    cubeRange: 600,
+    cubeZoffset: 1,
+    dataZoffset: 0,
+    paperXrange: 600,
+    paperYrange: 600,
+}
+
 type sliderParams = {
     min: number
     max: number
@@ -51,15 +59,6 @@ const sliderProps: Record<string, sliderParams> = {
         id: "n-s-paper-y-range",
     },
 }
-
-const INIT_STATE: Record<string, number> = {
-    cubeRange: 600,
-    cubeZoffset: 1,
-    dataZoffset: 0,
-    paperXrange: 600,
-    paperYrange: 600,
-}
-
 const idToStateMap: Record<string, string> = {
     "n-s-cube-range": "cubeRange",
     "n-s-cube-z-offset": "cubeZoffset",
