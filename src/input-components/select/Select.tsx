@@ -2,13 +2,26 @@
 import { jsx } from "@emotion/core"
 import { selectCss, selectContainerCss } from "./SelectCss"
 
-const Select = () => (
+type propType = {
+    id: string
+    options: string[]
+    label: string
+    value: string
+    onChange: (id: string, value: string) => void
+}
+const Select = ({ id, options, label, value, onChange }: propType) => (
     <div css={selectContainerCss}>
-        <label>My label</label>
-        <select css={selectCss}>
-            <option>Option 234546242141241241</option>
-            <option>Option 1</option>
-            <option>Option 1</option>
+        <label>{label}</label>
+        <select
+            css={selectCss}
+            value={value}
+            onChange={(e: React.ChangeEvent<HTMLSelectElement>) =>
+                onChange(id, e.target.value)
+            }
+        >
+            {options.map(option => (
+                <option key={id + option}>{option}</option>
+            ))}
         </select>
     </div>
 )
