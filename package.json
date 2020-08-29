@@ -7,6 +7,7 @@
         "@types/node": "^12.0.0",
         "@types/react": "^16.9.0",
         "@types/react-dom": "^16.9.0",
+        "bare-minimum-2d": "^0.2.0",
         "chokidar-cli": "^2.1.0",
         "npm-run-all": "^4.1.5",
         "react": "^16.13.1",

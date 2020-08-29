@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core"
 import { useState, FunctionComponent } from "react"
-
+import BareMinimum2d from "bare-minimum-2d"
+import bareMinimumProps from "./sample"
 import {
     INIT_STATE as SCENE_SETTINGS_INIT_STATE,
     SceneSettings,
@@ -20,11 +21,7 @@ import {
 import Select from "./input-components/select/Select"
 
 const Card: FunctionComponent = ({ children }) => (
-    <div
-        css={css`
-            width: 99%;
-        `}
-    >
+    <div className="w-full md:w-1/2 lg:w-1/3">
         <div
             css={css`
                 border-width: 1px;
@@ -34,7 +31,6 @@ const Card: FunctionComponent = ({ children }) => (
                 padding: 10px;
                 border-radius: 20px;
             `}
-            className="sm:w-full md:w-1/2 lg:w-1/3"
         >
             {children}
         </div>
@@ -62,10 +58,18 @@ const App = () => {
         <div
             css={css`
                 background-color: #17212b;
-                height: 100vh;
                 padding: 5px;
             `}
+            className="sm:flex"
         >
+            <div
+                css={css`
+                    height: 100vh;
+                `}
+                className="w-full md:w-1/2 lg:w-2/3"
+            >
+                <BareMinimum2d {...bareMinimumProps} />
+            </div>
             <Card>
                 <Select
                     id="current-menu"
