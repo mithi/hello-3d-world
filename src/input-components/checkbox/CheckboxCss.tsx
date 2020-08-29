@@ -55,7 +55,7 @@ const checkboxCss = css`
 
 const checkboxContainerCss = css`
     padding: 10px;
-    background-color: black;
+    background-color: #17212b;
     font-size: 15px;
     font-family: monaco;
     padding: 10px;

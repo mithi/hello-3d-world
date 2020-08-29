@@ -2,15 +2,25 @@
 import { jsx } from "@emotion/core"
 import { checkboxCss, checkboxContainerCss } from "./CheckboxCss"
 
-const Checkbox = () => (
+type propType = {
+    id: string
+    label: string
+    value: boolean
+    onChange: (id: string, value: string) => void
+}
+const Checkbox = ({ label, value, id, onChange }: propType) => (
     <div css={[checkboxCss, checkboxContainerCss]}>
         <input
             className="styled-checkbox"
-            id="styled-checkbox-2"
+            id={id}
             type="checkbox"
-            value="value2"
+            value={value === true ? "1" : "0"}
+            checked={value}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                onChange(id, e.target.value)
+            }
         />
-        <label htmlFor="styled-checkbox-2">CSS Only</label>
+        <label htmlFor={id}>{label}</label>
     </div>
 )
 
