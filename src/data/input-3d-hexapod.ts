@@ -1,58 +1,9 @@
-enum DataSpecType {
-    polygon = "polygon",
-    points = "points",
-    lines = "lines",
-}
-
-interface Polygon2dSpecs {
-    x: Array<number>
-    y: Array<number>
-    borderColor: string
-    borderOpacity: number
-    fillColor: string
-    fillOpacity: number
-    borderSize: number
-    type: DataSpecType.polygon
-    id: string
-}
-
-interface Points2dSpecs {
-    x: Array<number>
-    y: Array<number>
-    color: string
-    opacity: number
-    size: number
-    type: DataSpecType.points
-    id: string
-}
-
-interface Lines2dSpecs {
-    x0: Array<number>
-    y0: Array<number>
-    x1: Array<number>
-    y1: Array<number>
-    color: string
-    opacity: number
-    size: number
-    type: DataSpecType.lines
-    id: string
-}
-
-interface Lines3dSpecs extends Lines2dSpecs {
-    z0: Array<number>
-    z1: Array<number>
-}
-
-interface Polygon3dSpecs extends Polygon2dSpecs {
-    z: Array<number>
-}
-
-interface Points3dSpecs extends Points2dSpecs {
-    z: Array<number>
-}
-
-type Data2dSpecs = Polygon2dSpecs | Lines2dSpecs | Points2dSpecs
-type Data3dSpecs = Polygon3dSpecs | Lines3dSpecs | Points3dSpecs
+import {
+    DataSpecType,
+    Polygon3dSpecs,
+    Points3dSpecs,
+    Lines3dSpecs,
+} from "@mithi/bare-minimum-3d/lib/cjs/primitive-types"
 
 const BODY_MESH_COLOR = "#ff6348"
 const BODY_COLOR = "#FC427B"
