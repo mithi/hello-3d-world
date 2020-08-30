@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "386b253bcd06cb7ea46d8d815fa7f1be",
+    "revision": "6a327ed7173ff8123e8871b0c360b7c3",
     "url": "/hello-3d-world/index.html"
   },
   {
-    "revision": "d5064f3d967d54d393ed",
+    "revision": "2bde141d6ebff7704564",
     "url": "/hello-3d-world/static/css/main.123b2b1b.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hello-3d-world/static/js/2.f235b6e4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d5064f3d967d54d393ed",
-    "url": "/hello-3d-world/static/js/main.f31a3065.chunk.js"
+    "revision": "2bde141d6ebff7704564",
+    "url": "/hello-3d-world/static/js/main.968a938e.chunk.js"
   },
   {
     "revision": "5cb2843c933fae97e1a4",
