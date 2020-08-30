@@ -28,7 +28,7 @@ const ViewSettings = ({ values, setValueFunction }: propType) => {
             <Select
                 onChange={setValue}
                 key={settings.defaultCamStateProps.id}
-                value={settings.idToStateMap[settings.defaultCamStateProps.id]}
+                value={values[settings.defaultCamStateProps.id] as string}
                 {...settings.defaultCamStateProps}
             />
         </div>
