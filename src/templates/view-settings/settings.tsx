@@ -1,11 +1,11 @@
 const INIT_STATE = {
     camTx: -0.2,
-    camTy: -0.2,
+    camTy: -0.68,
     camTz: 1.5,
     cubeRx: 57,
     cubeRy: -4,
     cubeRz: 16.5,
-    camZoom: 4.1,
+    camZoom: 3.1,
     canvasToViewRatio: 300,
     defaultCamZoffset: 5,
     defaultCamOrientation: "z-forward-x-left",

@@ -54,8 +54,8 @@ const App = () => {
     const [sceneSettings, setSceneSettings] = useState(SCENE_SETTINGS_INIT_STATE)
     const [viewSettings, setViewSettings] = useState(VIEW_SETTINGS_INIT_STATE)
     const [sceneOptions, setSceneOptions] = useState(SCENE_OPTIONS_INIT_STATE)
-    const [currentMenu, setCurrentMenu] = useState("scene-settings")
-    const menuOptions = ["scene-settings", "view-settings", "scene-options"]
+    const [currentMenu, setCurrentMenu] = useState("view-settings")
+    const menuOptions = ["view-settings", "scene-options", "scene-settings"]
 
     const logCurrentMenu = (_: string, value: string) => setCurrentMenu(value)
 
@@ -68,13 +68,14 @@ const App = () => {
     const logSceneOptions = (stateKey: string, value: boolean) =>
         setSceneOptions({ ...sceneOptions, [stateKey]: value })
 
-    const sceneOptionsData = partialSceneOptionsData(sceneOptions)
+    const newSceneOptionsData = partialSceneOptionsData(sceneOptions)
     const bareMinimumProps = renderScene(
         viewSettings,
         sceneSettings,
-        sceneOptionsData,
+        newSceneOptionsData,
         sample3d
     )
+
     return (
         <Layout>
             <Layout.Main>
