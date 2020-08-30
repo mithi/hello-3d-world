@@ -19,6 +19,17 @@ const Card: FunctionComponent = ({ children }) => (
     </div>
 )
 
+type propType = { left: JSX.Element; right: JSX.Element }
+
+const TwoColumnRow = ({ left, right }: propType) => {
+    return (
+        <div className="flex">
+            <div className="w-1/2">{left}</div>
+            <div className="w-1/2">{right}</div>
+        </div>
+    )
+}
+
 class Layout extends React.Component {
     static Side: FunctionComponent = ({ children }) => <Card>{children}</Card>
     static Main: FunctionComponent = ({ children }) => (
@@ -32,19 +43,17 @@ class Layout extends React.Component {
         </div>
     )
 
-    render() {
-        return (
-            <div
-                css={css`
-                    background-color: #17212b;
-                    padding: 5px;
-                `}
-                className="sm:flex"
-            >
-                {this.props.children}
-            </div>
-        )
-    }
+    render = () => (
+        <div
+            css={css`
+                background-color: #17212b;
+                padding: 5px;
+            `}
+            className="sm:flex"
+        >
+            {this.props.children}
+        </div>
+    )
 }
 
-export default Layout
+export { Layout, TwoColumnRow }

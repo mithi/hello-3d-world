@@ -1,8 +1,12 @@
 import React, { useState } from "react"
-import Layout from "./Layout"
+import { Layout, TwoColumnRow } from "./Layout"
 import BareMinimum2d from "bare-minimum-2d"
 import renderScene from "@mithi/bare-minimum-3d"
-import { sampleSceneOptions as sceneOptionsData, hexapodData3d as sample3d } from "./data"
+import {
+    sampleSceneOptions as sceneOptionsData,
+    pyramidData3d,
+    hexapodData3d,
+} from "./data"
 
 import {
     SCENE_OPTIONS_INIT_STATE,
@@ -14,6 +18,7 @@ import {
 } from "./templates"
 
 import Select from "./input-components/select/Select"
+import { Data3dSpecs } from "@mithi/bare-minimum-3d/lib/cjs/primitive-types"
 
 const partialSceneOptionsData = (sceneOptions: Record<string, boolean>) => {
     const {
@@ -35,14 +40,24 @@ const partialSceneOptionsData = (sceneOptions: Record<string, boolean>) => {
         cubeAxes: showCubeAxes ? sceneOptionsData.cubeAxes : undefined,
     }
 }
+
+const menuOptions = ["view-settings", "scene-options", "scene-settings"]
+const dataOptions = ["hexapod", "pyramid", "none"]
+const data3d: Record<string, Array<Data3dSpecs>> = {
+    hexapod: hexapodData3d,
+    pyramid: pyramidData3d,
+    none: [],
+}
+
 const App = () => {
     const [sceneSettings, setSceneSettings] = useState(SCENE_SETTINGS_INIT_STATE)
     const [viewSettings, setViewSettings] = useState(VIEW_SETTINGS_INIT_STATE)
     const [sceneOptions, setSceneOptions] = useState(SCENE_OPTIONS_INIT_STATE)
-    const [currentMenu, setCurrentMenu] = useState("view-settings")
-    const menuOptions = ["view-settings", "scene-options", "scene-settings"]
+    const [currentMenu, setCurrentMenu] = useState(menuOptions[0])
+    const [currentData, setCurrentData] = useState(dataOptions[0])
 
     const logCurrentMenu = (_: string, value: string) => setCurrentMenu(value)
+    const logCurrentData = (_: string, value: string) => setCurrentData(value)
 
     const logSceneSettings = (stateKey: string, value: number) =>
         setSceneSettings({ ...sceneSettings, [stateKey]: value })
@@ -58,7 +73,7 @@ const App = () => {
         viewSettings,
         sceneSettings,
         newSceneOptionsData,
-        sample3d
+        data3d[currentData]
     )
 
     return (
@@ -67,11 +82,23 @@ const App = () => {
                 <BareMinimum2d {...bareMinimumProps} />
             </Layout.Main>
             <Layout.Side>
-                <Select
-                    id="current-menu"
-                    options={menuOptions}
-                    onChange={logCurrentMenu}
-                    value={currentMenu}
+                <TwoColumnRow
+                    left={
+                        <Select
+                            id="current-menu"
+                            options={menuOptions}
+                            onChange={logCurrentMenu}
+                            value={currentMenu}
+                        />
+                    }
+                    right={
+                        <Select
+                            id="current-data"
+                            options={dataOptions}
+                            onChange={logCurrentData}
+                            value={currentData}
+                        />
+                    }
                 />
                 <div hidden={currentMenu !== "scene-settings"}>
                     <SceneSettings
