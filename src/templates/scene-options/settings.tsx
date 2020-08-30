@@ -15,13 +15,6 @@ const idToStateMap: Record<string, string> = {
     "b-show-edge-axes": "showEdgeAxes",
     "b-show-cube-axes": "showCubeAxes",
 }
-const stateIds = [
-    "b-show-xy-plane",
-    "b-show-crosslines",
-    "b-show-cube-edges",
-    "b-show-world-axes",
-    "b-show-edge-axes",
-    "b-show-cube-axes",
-]
+const stateIds = Object.keys(idToStateMap)
 
 export { idToStateMap, stateIds, INIT_STATE }

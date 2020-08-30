@@ -14,22 +14,8 @@ const INIT_STATE = {
 const defaultCamStateProps = {
     id: "n-v-default-cam-orientation",
     options: ["z-forward-x-left", "z-up-x-left", "z-up-x-forward", "z-forward-x-right"],
-    label: "default camera orientation",
+    label: "defaultCamOrientation",
 }
-
-const sliderStateIds = [
-    "n-v-cam-tx",
-    "n-v-cam-ty",
-    "n-v-cam-tz",
-    "n-v-cube-rx",
-    "n-v-cube-ry",
-    "n-v-cube-rz",
-    "n-v-cam-zoom",
-    "n-v-canvas-to-view-ratio",
-    "n-v-default-cam-z-offset",
-]
-
-const stateIds: string[] = [...sliderStateIds, defaultCamStateProps.id]
 
 const translateParams = { min: -5, max: 5, step: 0.01 }
 const rotateParams = { min: -180, max: 180, step: 0.1 }
@@ -42,17 +28,17 @@ type sliderParams = {
     id: string
 }
 const sliderProps: Record<string, sliderParams> = {
-    "n-v-cam-tx": { ...translateParams, label: "tx", id: "n-v-cam-tx" },
-    "n-v-cam-ty": { ...translateParams, label: "ty", id: "n-v-cam-ty" },
-    "n-v-cam-tz": { ...translateParams, label: "tz", id: "n-v-cam-tz" },
-    "n-v-cube-rx": { ...rotateParams, label: "rx", id: "n-v-cube-rx" },
-    "n-v-cube-ry": { ...rotateParams, label: "ry", id: "n-v-cube-ry" },
-    "n-v-cube-rz": { ...rotateParams, label: "rz", id: "n-v-cube-rz" },
+    "n-v-cam-tx": { ...translateParams, label: "camTx", id: "n-v-cam-tx" },
+    "n-v-cam-ty": { ...translateParams, label: "camTy", id: "n-v-cam-ty" },
+    "n-v-cam-tz": { ...translateParams, label: "camTz", id: "n-v-cam-tz" },
+    "n-v-cube-rx": { ...rotateParams, label: "cubeRx", id: "n-v-cube-rx" },
+    "n-v-cube-ry": { ...rotateParams, label: "cubeRy", id: "n-v-cube-ry" },
+    "n-v-cube-rz": { ...rotateParams, label: "cubeRz", id: "n-v-cube-rz" },
     "n-v-cam-zoom": {
         min: 0,
         max: 30,
         step: 0.1,
-        label: "zoom",
+        label: "camZoom",
         id: "n-v-cam-zoom",
     },
     "n-v-canvas-to-view-ratio": {
@@ -66,7 +52,7 @@ const sliderProps: Record<string, sliderParams> = {
         min: -20,
         max: 20,
         step: 0.1,
-        label: "camZoffset",
+        label: "defaultCamZoffset",
         id: "n-v-default-cam-z-offset",
     },
 }
@@ -83,6 +69,9 @@ const idToStateMap: Record<string, string> = {
     "n-v-canvas-to-view-ratio": "canvasToViewRatio",
     "n-v-default-cam-orientation": "defaultCamOrientation",
 }
+const sliderStateIds = Object.keys(sliderProps)
+
+const stateIds: string[] = [...sliderStateIds, defaultCamStateProps.id]
 
 export {
     stateIds,
