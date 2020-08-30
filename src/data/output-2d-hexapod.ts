@@ -580,5 +580,5 @@ const data2d = [
     },
 ]
 
-const bareMinimumProps = { data: [...scene, ...data2d], container }
-export default bareMinimumProps
+const hexapod2dProps = { data: [...scene, ...data2d], container }
+export default hexapod2dProps

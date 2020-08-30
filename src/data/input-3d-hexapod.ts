@@ -288,7 +288,7 @@ const MISC_POINTS: Array<Points3dSpecs> = [
 
 // ...LEG_LINES, ...LEG_POINTS, ...MISC_POINTS
 
-const DATA = [
+const HEXAPOD_DATA3D = [
     SUPPORT_POLYGON,
     ...LEG_POINTS,
     ...LEG_LINES,
@@ -296,4 +296,5 @@ const DATA = [
     BODY_POINTS,
     ...MISC_POINTS,
 ]
-export default DATA
+
+export default HEXAPOD_DATA3D

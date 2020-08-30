@@ -2,34 +2,19 @@ import React, { useState } from "react"
 import Layout from "./Layout"
 import BareMinimum2d from "bare-minimum-2d"
 import renderScene from "@mithi/bare-minimum-3d"
-import sceneOptionsData from "./sample-scene"
-import sample3d from "./sample-3d-data"
-import {
-    INIT_STATE as SCENE_SETTINGS_INIT_STATE,
-    SceneSettings,
-} from "./templates/scene-settings/"
+import { sampleSceneOptions as sceneOptionsData, hexapodData3d as sample3d } from "./data"
 
 import {
-    INIT_STATE as VIEW_SETTINGS_INIT_STATE,
-    ViewSettings,
-} from "./templates/view-settings/"
-
-import {
-    INIT_STATE as SCENE_OPTIONS_INIT_STATE,
+    SCENE_OPTIONS_INIT_STATE,
+    SCENE_SETTINGS_INIT_STATE,
+    VIEW_SETTINGS_INIT_STATE,
     SceneOptions,
-} from "./templates/scene-options/"
+    ViewSettings,
+    SceneSettings,
+} from "./templates"
 
 import Select from "./input-components/select/Select"
 
-/*
-    showWorldAxes: true,
-    showEdgeAxes: true,
-    showCubeAxes: true,
-    showCubeEdgeAxes: true,
-    showXYplane: true,
-    showCrosslines: true,
-    showCubeEdges: true,
-*/
 const partialSceneOptionsData = (sceneOptions: Record<string, boolean>) => {
     const {
         showWorldAxes,
