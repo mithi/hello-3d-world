@@ -79,6 +79,10 @@ const App = () => {
     return (
         <Layout>
             <Layout.Main>
+                <a href="https://github.com/mithi/bare-minimum-3d">
+                    Mithi's Bare Minimum 3d Library
+                </a>
+
                 <BareMinimum2d {...bareMinimumProps} />
             </Layout.Main>
             <Layout.Side>

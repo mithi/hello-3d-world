@@ -34,7 +34,7 @@ const checkboxCss = css`
 
         // Box checked
         &:checked + label:before {
-            background: #e91e63;
+            background: #673ab7;
         }
 
         // Checkmark. Could be replaced with an image
@@ -55,11 +55,7 @@ const checkboxCss = css`
 
 const checkboxContainerCss = css`
     padding: 10px;
-    background-color: #17212b;
     font-size: 15px;
-    font-family: monaco;
-    padding: 10px;
-    color: #e91e63;
     &:hover {
         color: #673ab7;
     }
