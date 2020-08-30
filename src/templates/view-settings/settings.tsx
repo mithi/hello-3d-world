@@ -1,10 +1,10 @@
 const INIT_STATE = {
-    camTx: -0.2,
-    camTy: -0.68,
-    camTz: 1.5,
-    cubeRx: 57,
-    cubeRy: -4,
-    cubeRz: 16.5,
+    camTx: 0.0,
+    camTy: 0.0,
+    camTz: 2.0,
+    cubeRx: 0,
+    cubeRy: 0,
+    cubeRz: 0,
     camZoom: 3.1,
     canvasToViewRatio: 300,
     defaultCamZoffset: 5,
@@ -12,7 +12,7 @@ const INIT_STATE = {
 }
 
 const defaultCamStateProps = {
-    id: "v-default-cam-orientation",
+    id: "n-v-default-cam-orientation",
     options: ["z-forward-x-left", "z-up-x-left", "z-up-x-forward", "z-forward-x-right"],
     label: "default camera orientation",
 }
@@ -81,6 +81,7 @@ const idToStateMap: Record<string, string> = {
     "n-v-cam-zoom": "camZoom",
     "n-v-default-cam-z-offset": "defaultCamZoffset",
     "n-v-canvas-to-view-ratio": "canvasToViewRatio",
+    "n-v-default-cam-orientation": "defaultCamOrientation",
 }
 
 export {
