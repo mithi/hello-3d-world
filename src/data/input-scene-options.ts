@@ -31,8 +31,8 @@ const cubeAxes = {
 const sceneOptions = {
     paper: { color: "#17212B", opacity: 1 },
     xyPlane: { color: "#0652DD", opacity: 0.1 },
-    sceneEdges: { color: "#607D8B", opacity: 1 },
-    crossLines: { color: "#795548", opacity: 1 },
+    sceneEdges: { color: "#1e3799", opacity: 1 },
+    crossLines: { color: "#079992", opacity: 1 },
     edgeAxes,
     worldAxes,
     cubeAxes,
