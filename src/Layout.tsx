@@ -48,7 +48,7 @@ class Layout extends React.Component {
                 padding: 5px;
                 background-color: #17212b;
                 font-size: 10px;
-                font-family: monaco;
+                font-family: Montserrat, monaco, monospace;
                 color: #e91e63;
                 a {
                     padding: 15px;

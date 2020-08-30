@@ -7,7 +7,6 @@ const selectCss = css`
     padding: 10px;
     margin: 10px;
     font-size: 10px;
-    font-family: monaco;
     width: 98%;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -27,6 +26,7 @@ const selectCss = css`
 
 const selectContainerCss = css`
     padding: 10px;
+    color: #009688;
     &:hover {
         color: #673ab7;
     }
