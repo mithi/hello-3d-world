@@ -1,1 +1,1 @@
-declare module "bare-minimum-2d"
+declare module "@mithi/bare-minimum-2d"

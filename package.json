@@ -2,13 +2,14 @@
     "name": "hello-3d-world",
     "version": "0.1.0",
     "private": true,
+    "homepage": "http://mithi.github.io/hello-3d-world",
     "dependencies": {
         "@emotion/core": "^10.0.35",
         "@mithi/bare-minimum-3d": "^0.1.3",
+        "@mithi/bare-minimum-2d": "^0.2.0",
         "@types/node": "^12.0.0",
         "@types/react": "^16.9.0",
         "@types/react-dom": "^16.9.0",
-        "bare-minimum-2d": "^0.2.0",
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-scripts": "3.4.3",
@@ -20,7 +21,9 @@
         "start": "npm-run-all build:tailwind --parallel watch:tailwind start:react",
         "start:react": "react-scripts start",
         "prebuild": "NODE_ENV=production run-s build:tailwind",
-        "build": "react-scripts build"
+        "build": "react-scripts build",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": "react-app"
@@ -39,9 +42,10 @@
     },
     "devDependencies": {
         "autoprefixer": "^9.8.6",
-        "postcss-cli": "^7.1.1",
-        "tailwindcss": "^1.7.5",
         "chokidar-cli": "^2.1.0",
-        "npm-run-all": "^4.1.5"
+        "gh-pages": "^3.1.0",
+        "npm-run-all": "^4.1.5",
+        "postcss-cli": "^7.1.1",
+        "tailwindcss": "^1.7.5"
     }
 }

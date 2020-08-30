@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Layout, TwoColumnRow } from "./Layout"
-import BareMinimum2d from "bare-minimum-2d"
+import BareMinimum2d from "@mithi/bare-minimum-2d"
 import renderScene from "@mithi/bare-minimum-3d"
 import {
     sampleSceneOptions as sceneOptionsData,
