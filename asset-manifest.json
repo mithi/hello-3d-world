@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/hello-3d-world/static/css/main.123b2b1b.chunk.css",
-    "main.js": "/hello-3d-world/static/js/main.968a938e.chunk.js",
-    "main.js.map": "/hello-3d-world/static/js/main.968a938e.chunk.js.map",
+    "main.js": "/hello-3d-world/static/js/main.3f24b593.chunk.js",
+    "main.js.map": "/hello-3d-world/static/js/main.3f24b593.chunk.js.map",
     "runtime-main.js": "/hello-3d-world/static/js/runtime-main.b1802b7a.js",
     "runtime-main.js.map": "/hello-3d-world/static/js/runtime-main.b1802b7a.js.map",
-    "static/js/2.f235b6e4.chunk.js": "/hello-3d-world/static/js/2.f235b6e4.chunk.js",
-    "static/js/2.f235b6e4.chunk.js.map": "/hello-3d-world/static/js/2.f235b6e4.chunk.js.map",
+    "static/js/2.5babaf41.chunk.js": "/hello-3d-world/static/js/2.5babaf41.chunk.js",
+    "static/js/2.5babaf41.chunk.js.map": "/hello-3d-world/static/js/2.5babaf41.chunk.js.map",
     "index.html": "/hello-3d-world/index.html",
-    "precache-manifest.c2169699a75ac13ad237f18fa1bcee2b.js": "/hello-3d-world/precache-manifest.c2169699a75ac13ad237f18fa1bcee2b.js",
+    "precache-manifest.76f097f2534c8b3b636c7783eeef977f.js": "/hello-3d-world/precache-manifest.76f097f2534c8b3b636c7783eeef977f.js",
     "service-worker.js": "/hello-3d-world/service-worker.js",
     "static/css/main.123b2b1b.chunk.css.map": "/hello-3d-world/static/css/main.123b2b1b.chunk.css.map",
-    "static/js/2.f235b6e4.chunk.js.LICENSE.txt": "/hello-3d-world/static/js/2.f235b6e4.chunk.js.LICENSE.txt"
+    "static/js/2.5babaf41.chunk.js.LICENSE.txt": "/hello-3d-world/static/js/2.5babaf41.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b1802b7a.js",
-    "static/js/2.f235b6e4.chunk.js",
+    "static/js/2.5babaf41.chunk.js",
     "static/css/main.123b2b1b.chunk.css",
-    "static/js/main.968a938e.chunk.js"
+    "static/js/main.3f24b593.chunk.js"
   ]
 }
